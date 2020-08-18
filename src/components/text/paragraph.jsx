@@ -13,7 +13,7 @@ const Para = styled.p`
 `
 
 
-const Paragprah = (props) => {
+const Paragraph = (props) => {
   return(
     <Para style={{...props.style}}>
       {props.children}
@@ -21,4 +21,4 @@ const Paragprah = (props) => {
   )
 }
 
-export default Paragprah
+export default Paragraph

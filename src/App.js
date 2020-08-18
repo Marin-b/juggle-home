@@ -1,11 +1,31 @@
-import React from 'react';
-import Intro from './sections/intro'
+import React, { useState } from 'react';
+import { Intro, NoChance } from './sections'
+import Navbar from './components/navbar'
+import { IntlProvider } from 'react-intl';
 
-function App() {
+import en from './translations/en.json';
+import es from './translations/es.json'
+
+const messages = {
+  en,
+  es
+}
+const language = navigator.language.split(/[-_]/)[0];
+
+const  App = () => {
+  const [lang, setLang] = useState('en')
   return (
-    <div className="App">
-       <Intro />
-    </div>
+    <IntlProvider
+      locale={language}
+      defaultLocale={'en'}
+      messages={messages[lang]}
+    >
+      <div className="App">
+        <Navbar lang={lang} setLang={setLang} />
+        <Intro />
+        <NoChance />
+      </div>
+    </IntlProvider>
   );
 }
 
