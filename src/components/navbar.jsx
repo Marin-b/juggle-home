@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components"
 import Logo from "./logo"
 
-import { colors, fonts } from "../constants"
+import { colors, fonts, spacers } from "../constants"
 
 const NavContainer = styled.div`
     position: absolute;
@@ -15,38 +15,34 @@ const NavContainer = styled.div`
 `
 
 const LogoContainer = styled.div`
-    width: 80vw;
+    flex-grow: 1;
     position: relative;
+    padding-left: ${spacers.padding}
 `
 const LangContainer = styled.div`
-    width: 20vw;
+    width: 250px;
     z-index: 10;
     color: white;
-    text-align: center;
+    text-align: right;
+    padding-right: ${spacers.padding};
+    user-select: none;
 `
 
 const LangSelector = styled.span`
     font-family: ${fonts.title};
     font-size: 1.1em;
-    color: ${props => props.selected ? colors.secondary : 'white'};
     cursor: pointer;
+    text-transform: uppercase
 `
 const Navbar = (props) => {
+    const nextLang = props.lang === 'en' ? 'es' : 'en'
     return <NavContainer>
         <LogoContainer>
-            <div className="container">
-                <Logo />
-            </div>
+            <Logo />
         </LogoContainer>
         <LangContainer>
-            <LangSelector selected={props.lang === 'en'} onClick={() => props.setLang('en')}>
-                En
-            </LangSelector>
-            <LangSelector>
-                &nbsp; | &nbsp;
-            </LangSelector>
-            <LangSelector selected={props.lang === 'es'} onClick={() => props.setLang('es')}>
-                Es
+            <LangSelector onClick={() => props.setLang(nextLang)}>
+                {nextLang}
             </LangSelector>
         </LangContainer>
     </NavContainer>

@@ -11,12 +11,12 @@ const fonts = {
 
 const fontSizes = {
   paragraph: { 
-    desktop: '1.8em',
-    mobile: '1.2em'
+    desktop: '1.5em',
+    mobile: '1em'
   },
   mainHeader: { 
-    desktop: '5em',
-    mobile: '3em'
+    desktop: '4em',
+    mobile: '2.2em'
   },
   secondaryHeader: { 
     desktop: '3em',
@@ -24,4 +24,12 @@ const fontSizes = {
   },
 }
 
-export { colors, fonts, fontSizes }
+
+const spacers = {
+  margin: {
+    desktop: "100px",
+    mobile: "30px"
+  },
+  padding: "5vw"
+}
+export { colors, fonts, fontSizes, spacers }
