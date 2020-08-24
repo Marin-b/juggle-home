@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { fonts, fontSizes } from "../../constants"
 
-const Header = styled.h1`
+const Header = styled.h2`
   font-family: ${fonts.title};
   font-size: ${fontSizes.secondaryHeader.desktop};
   @media screen and (max-width: 900px) {

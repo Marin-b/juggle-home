@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Intro, NoChance } from './sections'
+import { Intro, NoChance, Category } from './sections'
 import Navbar from './components/navbar'
 import { IntlProvider } from 'react-intl';
 
@@ -24,6 +24,7 @@ const  App = () => {
         <Navbar lang={lang} setLang={setLang} />
         <Intro />
         <NoChance />
+        <Category />
       </div>
     </IntlProvider>
   );

@@ -11,7 +11,7 @@ const Button = styled.a`
     text-transform: uppercase;
     font-size: 1.5em;
     font-family: ${fonts.title};
-    padding: 2vh 3vh;
+    padding: 2vh 3vw;
     box-decoration-break: clone;
     text-align: center;
     cursor: pointer;

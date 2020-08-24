@@ -12,7 +12,7 @@ const fonts = {
 const fontSizes = {
   paragraph: { 
     desktop: '1.5em',
-    mobile: '1em'
+    mobile: '1.2em'
   },
   mainHeader: { 
     desktop: '4em',
@@ -20,7 +20,7 @@ const fontSizes = {
   },
   secondaryHeader: { 
     desktop: '3em',
-    mobile: '2em'
+    mobile: '1.8em'
   },
 }
 

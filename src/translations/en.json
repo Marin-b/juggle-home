@@ -3,6 +3,16 @@
   "intro.emphasis": " done.",
   "intro.paragraph": "Juggle will help you get stuff done by posting any tasks you need accomplished and get connected to the right professionals, all while working around your budget and schedule.",
   "early_access": "get early access",
-  "nochance.title": "Your to-do list {lb} stands no-chance",
-  "nochance.paragraph": "Start crushing your to-do list by simply posting whatever you need to be done and our trusted Jugglers will be right there for you"
+  "nochance.title": "Your to-do list stands no-chance",
+  "nochance.paragraph": "Start crushing your to-do list by simply posting whatever you need to be done and our trusted Jugglers will be right there for you",
+  "category.title": "Just post a task and we'll take care of the rest",
+  "category.paragraph": "Posting a task on Juggle is easy and free of charge. Just explain what needs to be done, when and your budget for the job. Juggle can help you with:",
+  "cleaning": "Cleaning",
+  "moving": "Moving",
+  "delivery": "Delivery",
+  "handyman": "Handyman",
+  "assembly": "Assembly",
+  "photovideo": "Photo / Video",
+  "gardening": "Gardening",
+  "anything": "Anything really..."
 }
