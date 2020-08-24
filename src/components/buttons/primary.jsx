@@ -16,12 +16,14 @@ const Button = styled.a`
     text-align: center;
     cursor: pointer;
     max-width: 400px;
+    transition: padding 0.3s;
     &:hover{
-        text-decoration: none;
-        color:  ${colors.secondary};
+        padding: 2vh 4vw;
+        color: ${colors.secondary};
     }
     @media screen and (max-width: 900px) {
         font-size: 1.1em;
+        padding: 2vh 9vw;
     }
 `
 const PrimaryButton = (props) => {

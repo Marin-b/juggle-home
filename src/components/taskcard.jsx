@@ -11,11 +11,16 @@ const Card = styled.div`
   padding: 20px;
   margin-bottom: 20px;
   float: right;
+  box-shadow: 2px 3px 11px -5px rgba(0,0,0,0.62);
+  transition: transform 0.5s;
+  &:hover {
+    transform: translate(-1%, -1%)
+  }
   @media screen and (max-width: 900px) {
     width: 280px;
     height: 115px;
     padding: 10px;
-    float: inherit;
+    float: right;
   }
   &:last-child {
     margin-bottom: 0px;
@@ -70,7 +75,7 @@ const TaskCard = (props) => {
         {props.category}
       </Title>
       <Delimiter/>
-      <div className="d-flex align-items-center h-75">
+      <div className="d-flex h-75">
         <Avatar source={props.avatar}/>
         <div className="d-flex flex-column h-100 justify-content-around pt-2" style={{flexGrow: 1, padding: '0px 20px'}}>
             <WhiteBar />   

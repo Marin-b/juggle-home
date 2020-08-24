@@ -15,23 +15,32 @@ const LeftSide = styled.div`
   }
 `
 
-const YellowContainer = styled.div`
+const BlueContainer = styled.div`
   position: absolute;
   top: 0px;
   left: 0px;
   width: 80%;
   height: 100%;
   z-index: -1;
-  background-color: ${colors.primary};
+  background-color: ${colors.tertiary};
   @media screen and (max-width: 900px) {
     width: 100%; 
   }
 `
+
+const CardContainer = styled.div`
+  align-items: flex-end;
+  @media screen and (max-width: 900px) {
+    align-items: center;
+  }
+`
+
 const RightSide = styled.div`
   width: 60%;
   padding: ${spacers.padding};
   @media screen and (max-width: 900px) {
     width: 100%;
+    padding: 8vh ${spacers.padding};
   }
 `
 
@@ -55,7 +64,7 @@ const ListItem = styled.li`
   }
   &:before {
     content: "•";
-    font-size: 20px;
+    font-size: 30px;
     color: ${colors.primary};
   }
 `
@@ -70,12 +79,12 @@ const Category = (props) => {
   return(
     <SectionContainer>
       <LeftSide>
-        <YellowContainer /> 
-        <div className="container text-align-right d-flex flex-column justify-content-around align-items-end h-100">
+        <BlueContainer /> 
+        <CardContainer className="container text-align-right d-flex flex-column justify-content-around h-100">
           <TaskCard category="cleaning" avatar="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"/>
           <TaskCard right="5vw" category="photo / video" avatar="https://images.unsplash.com/photo-1511945863317-d60e146e9016?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1637&q=80"/>
           <TaskCard category="moving" avatar="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"/>
-        </div>
+        </CardContainer>
       </LeftSide>
       <RightSide>
         <div className="container">
@@ -86,8 +95,8 @@ const Category = (props) => {
             <FormattedMessage id="category.paragraph" />
           </Paragraph>
           <div className="d-flex">
-              { LISTS.map(list => <List>
-                  {list.map(item => <ListItem>
+              { LISTS.map(list => <List key={list}>
+                  {list.map(item => <ListItem key={item}>
                       <Paragraph>
                         <FormattedMessage id={item} />
                       </Paragraph>
