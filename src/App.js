@@ -14,6 +14,16 @@ const language = navigator.language.split(/[-_]/)[0];
 
 const  App = () => {
   const [lang, setLang] = useState('en')
+  const [appUrl, setAppUrl] = useState('')
+  console.log(process.env.REACT_APP_FIREBASE_AUTH)
+  const fetchUrl = () => {
+    if (appUrl != '') { return }
+
+    fetch('https://juggletechnologies-78310.firebaseio.com/app-url.json?auth=' + process.env.REACT_APP_FIREBASE_AUTH)
+      .then(res => res.json())
+      .then(body => setAppUrl(body.url))
+  }
+  fetchUrl()
   return (
     <IntlProvider
       locale={language}
@@ -22,11 +32,11 @@ const  App = () => {
     >
       <div className="App">
         <Navbar lang={lang} setLang={setLang} />
-        <Intro />
+        <Intro appUrl={appUrl} />
         <NoChance />
         <Category />
         <Jugglers />
-        <Footer />
+        <Footer appUrl={appUrl} />
       </div>
     </IntlProvider>
   );

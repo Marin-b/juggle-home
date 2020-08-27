@@ -55,7 +55,7 @@ const Intro = (props) => {
             <Paragraph style={{color: 'white', margin: '2em 0px', maxWidth: "700px"}}>
               <FormattedMessage id="intro.paragraph" />
             </Paragraph>
-            <PrimaryButton>
+            <PrimaryButton href={props.appUrl}>
               <FormattedMessage id="early_access" />
             </PrimaryButton>
           </MainContainer>

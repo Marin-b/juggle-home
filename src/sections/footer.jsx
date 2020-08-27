@@ -38,7 +38,7 @@ const AllRight = styled.div`
   color: white;
   opacity: 0.5;
 `
-const Footer = () => {
+const Footer = (props) => {
   return (
     <Section>
         <Main className='d-flex align-items-center'>
@@ -55,7 +55,7 @@ const Footer = () => {
             </Paragraph>
           </div>
           <FormContainer>
-            <PrimaryButton>
+            <PrimaryButton href={props.appUrl}>
               <FormattedMessage id='early_access'/>
             </PrimaryButton>
           </FormContainer>
