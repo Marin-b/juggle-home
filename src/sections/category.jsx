@@ -11,7 +11,7 @@ const LeftSide = styled.div`
   min-height: 50vh;
   padding: ${spacers.padding} 0px;
   @media screen and (max-width: 900px) {
-    width: 100%; 
+    width: 100%;
   }
 `
 
@@ -24,7 +24,7 @@ const BlueContainer = styled.div`
   z-index: -1;
   background-color: ${colors.tertiary};
   @media screen and (max-width: 900px) {
-    width: 100%; 
+    width: 100%;
   }
 `
 
@@ -71,7 +71,7 @@ const ListItem = styled.li`
 
 const LEFTLIST = ['cleaning', 'moving', 'delivery', 'handyman']
 
-const RIGHTLIST = ['assembly', 'photovideo', 'gardening', 'anything']
+const RIGHTLIST = ['assembly', 'photovideo', 'computerIT', "pets", 'anything']
 
 const LISTS = [LEFTLIST, RIGHTLIST]
 
@@ -79,7 +79,7 @@ const Category = (props) => {
   return(
     <SectionContainer>
       <LeftSide>
-        <BlueContainer /> 
+        <BlueContainer />
         <CardContainer className="container text-align-right d-flex flex-column justify-content-around h-100">
           <TaskCard category="cleaning" avatar="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80"/>
           <TaskCard right="5vw" category="photo / video" avatar="https://images.unsplash.com/photo-1511945863317-d60e146e9016?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1637&q=80"/>
@@ -103,7 +103,7 @@ const Category = (props) => {
                     </ListItem>
                   )}
                 </List>
-              )}   
+              )}
           </div>
         </div>
       </RightSide>
