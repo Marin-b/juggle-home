@@ -69,9 +69,9 @@ const ListItem = styled.li`
   }
 `
 
-const LEFTLIST = ['cleaning', 'moving', 'delivery', 'handyman']
+const LEFTLIST = ['cleaning', 'moving', 'delivery', 'handyman', 'assembly']
 
-const RIGHTLIST = ['assembly', 'photovideo', 'computerIT', "pets", 'anything']
+const RIGHTLIST = ['photovideo', 'computerIT', "pets", 'anything']
 
 const LISTS = [LEFTLIST, RIGHTLIST]
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { colors, fonts, fontSizes } from '../constants'
+import { colors, fonts } from '../constants'
 
 const Card = styled.div`
   background-color: ${ colors.secondary };
@@ -16,12 +16,12 @@ const Card = styled.div`
   justify-content: space-around;
   flex-direction: column;
   transition: transform 0.5s;
+  &:hover {
+    transform: translate(-1%, -1%)
+  }
   @media screen and (max-width: 900px) {
     height: 40vh;
     width: 45vw;
-  }
-  &:hover {
-    transform: translate(-1%, -1%)
   }
 `
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components"
 import Logo from "./logo"
 
-import { colors, fonts, spacers } from "../constants"
+import { fonts, spacers } from "../constants"
 
 const NavContainer = styled.div`
     position: absolute;
