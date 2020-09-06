@@ -15,9 +15,9 @@ const language = navigator.language.split(/[-_]/)[0];
 const  App = () => {
   const [lang, setLang] = useState('en')
   const [appUrl, setAppUrl] = useState('#')
-  console.log(process.env.REACT_APP_FIREBASE_AUTH)
+
   const fetchUrl = () => {
-    if (appUrl != '') { return }
+    if (appUrl != '#') { return }
 
     fetch('https://juggletechnologies-78310.firebaseio.com/app-url.json?auth=' + process.env.REACT_APP_FIREBASE_AUTH)
       .then(res => res.json())
