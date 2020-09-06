@@ -13,7 +13,7 @@ const messages = {
 const language = navigator.language.split(/[-_]/)[0];
 
 const  App = () => {
-  const [lang, setLang] = useState('en')
+  const [lang, setLang] = useState('es')
   const [appUrl, setAppUrl] = useState('#')
 
   const fetchUrl = () => {
